@@ -1,0 +1,68 @@
+testbed:
+  name: eve-ng-bgp-lab
+  description: EVE-NG lab with BGP-enabled Cisco routers
+
+devices:
+  router1:
+    type: router
+    os: ios
+    platform: csr1000v
+    hostname: router1.eve-ng.local
+    ip: 192.168.137.101
+    credentials:
+      default:
+        username: admin
+        password: admin123
+    connection_options:
+      cli:
+        protocol: ssh
+        port: 22
+        timeout: 30
+
+  router2:
+    type: router
+    os: ios
+    platform: csr1000v
+    hostname: router2.eve-ng.local
+    ip: 192.168.137.102
+    credentials:
+      default:
+        username: admin
+        password: admin123
+    connection_options:
+      cli:
+        protocol: ssh
+        port: 22
+        timeout: 30
+
+  router3:
+    type: router
+    os: ios
+    platform: csr1000v
+    hostname: router3.eve-ng.local
+    ip: 192.168.137.103
+    credentials:
+      default:
+        username: admin
+        password: admin123
+    connection_options:
+      cli:
+        protocol: ssh
+        port: 22
+        timeout: 30
+
+  pe-router:
+    type: router
+    os: ios
+    platform: csr1000v
+    hostname: pe-router.eve-ng.local
+    ip: 192.168.54.135
+    credentials:
+      default:
+        username: admin
+        password: admin123
+    connection_options:
+      cli:
+        protocol: ssh
+        port: 22
+        timeout: 30
