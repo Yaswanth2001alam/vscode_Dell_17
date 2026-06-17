@@ -1,0 +1,6 @@
+Device Name,IP Address,Vendor,Status,Location
+Router1,10.1.1.1,Cisco,Up,DC1
+Router2,10.1.1.2,Juniper,Down,DC2
+Switch1,10.2.1.1,Arista,Up,DC1
+Firewall1,10.3.1.1,PaloAlto,Up,DC3
+Router3,10.1.1.3,Cisco,Down,DC2
