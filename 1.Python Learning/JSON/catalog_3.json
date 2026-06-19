@@ -1,0 +1,16 @@
+{
+    "products":[
+        {
+            "name":"matcha",
+            "price": 12.99,
+            "in_stock": true,
+            "sale_price": 8.99
+        },
+        {
+            "name": "Black Tea",
+            "price": 9.99,
+            "in_stock": false
+        }
+    ]
+
+}

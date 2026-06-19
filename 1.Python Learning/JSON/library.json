@@ -1,0 +1,5 @@
+[
+  {"title": "To Kill a Mockingbird", "available": true, "rating": 9.1},
+  {"title": "The Great Gatsby", "available": false, "rating": null},
+  {"title": "1984", "available": true, "rating": 9.4}
+]
