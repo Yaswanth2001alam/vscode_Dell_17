@@ -1,0 +1,5 @@
+Interface Status     Speed
+--------------------------
+Gi0/1     up            1G
+Gi0/2     down          1G
+Te1/1     up           10G
