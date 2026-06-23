@@ -1,0 +1,7 @@
+{
+  "devices": [
+    { "hostname": "edge-rtr01", "role": "wan-edge", "mgmt_ip": "10.0.0.1",
+      "interfaces": [ { "name": "Ethernet1", "description": "UPLINK-to-core" } ] },
+    { "hostname": "edge-rtr02", "role": "wan-edge", "mgmt_ip": "10.0.0.2" }
+  ]
+}
