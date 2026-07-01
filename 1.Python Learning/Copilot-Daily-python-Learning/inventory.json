@@ -1,0 +1,23 @@
+{
+  "devices": [
+    {
+      "hostname": "rwa01",
+      "mgmt_ip": "10.0.0.1",
+      "vendor": "Juniper",
+      "status": "up"
+    },
+    {
+      "hostname": "ewa01",
+      "mgmt_ip": "10.0.0.2",
+      "vendor": "Cisco",
+      "status": "up"
+    },
+    {
+      "hostname": "ewa02",
+      "mgmt_ip": "10.0.0.3",
+      "vendor": "Arista",
+      "status": "down"
+    }
+  ],
+  "last_audit": "2026-06-29"
+}
