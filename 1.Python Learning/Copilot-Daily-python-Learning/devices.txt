@@ -1,0 +1,13 @@
+10.0.0.1
+10.0.0.2
+
+10.0.0.3
+10.0.0.4
+
+192.168.1.1
+192.168.1.2
+
+# test entry (should be ignored by your logic if needed)
+172.16.0.1
+
+``
