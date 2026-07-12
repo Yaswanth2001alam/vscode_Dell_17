@@ -1,0 +1,14 @@
+{
+  "devices": [
+    {
+      "hostname": "rwa01.str15",
+      "role": "WAN",
+      "os": "IOS-XR"
+    },
+    {
+      "hostname": "ewa03.str40",
+      "role": "WAN",
+      "os": "EOS"
+    }
+  ]
+}

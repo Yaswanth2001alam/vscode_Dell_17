@@ -1,0 +1,4 @@
+bgp_neighbor,state,prefixes
+PEER-RWA-EWA,Established,2450
+PEER-RWA-JWA,Idle,0
+PEER-EWA-JWA,Established,1980
