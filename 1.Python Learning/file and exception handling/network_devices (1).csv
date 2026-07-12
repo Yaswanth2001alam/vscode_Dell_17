@@ -1,0 +1,4 @@
+hostname,vendor,mgmt_ip,status
+rwa01.str15,Cisco IOS-XR,10.1.1.1,Up
+ewa03.str40,Arista EOS,10.1.1.2,Up
+jwa02.bl35,Juniper Junos,10.1.1.3,Down
