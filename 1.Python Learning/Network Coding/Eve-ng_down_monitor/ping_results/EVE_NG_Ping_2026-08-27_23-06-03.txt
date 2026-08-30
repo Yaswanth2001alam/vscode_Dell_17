@@ -1,0 +1,21 @@
+============================================================
+EVE-NG PING TEST RESULT
+============================================================
+
+Timestamp : 2026-08-27 23:06:03
+Target IP : 192.168.32.128
+Status    : UP - Ping Successful
+
+Ping Output:
+------------------------------------------------------------
+
+Pinging 192.168.32.128 with 32 bytes of data:
+Reply from 192.168.32.128: bytes=32 time=3ms TTL=64
+Reply from 192.168.32.128: bytes=32 time=2ms TTL=64
+Reply from 192.168.32.128: bytes=32 time=1ms TTL=64
+Reply from 192.168.32.128: bytes=32 time=1ms TTL=64
+
+Ping statistics for 192.168.32.128:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 1ms, Maximum = 3ms, Average = 1ms
