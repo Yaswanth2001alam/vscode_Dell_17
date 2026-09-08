@@ -1,0 +1,11 @@
+{
+  "servers": {
+    "sarvam": {
+      "command": "sarvam-mcp",
+      "args": [],
+      "env": {
+        "SARVAM_API_KEY": "sk_4sw4a2u6_BUoGULkGt69Fh89sqJRN4Xvg"
+      }
+    }
+  }
+}
