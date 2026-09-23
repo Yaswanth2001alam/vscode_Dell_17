@@ -1,0 +1,19 @@
+============================================================
+EVE-NG PING TEST RESULT
+============================================================
+
+Timestamp : 2026-09-20 11:54:50
+Target IP : 192.168.32.128
+Status    : DOWN - Ping Failed
+
+Ping Output:
+------------------------------------------------------------
+
+Pinging 192.168.32.128 with 32 bytes of data:
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 192.168.32.128:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
