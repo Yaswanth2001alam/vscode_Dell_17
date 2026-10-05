@@ -1,0 +1,32 @@
+---
+schema_version: 1
+
+# This file intentionally contains documentation-only addresses and no secrets.
+# Read credentials from LAB_USERNAME/LAB_PASSWORD or an approved secret manager.
+devices:
+  leaf01:
+    host: 192.0.2.11
+    platform: cisco_nxos
+    role: leaf
+    site: lab
+    port: 22
+    tags:
+      - canary
+      - evpn
+  leaf02:
+    host: 192.0.2.12
+    platform: cisco_nxos
+    role: leaf
+    site: lab
+    port: 22
+    tags:
+      - evpn
+  edge01:
+    host: 192.0.2.21
+    platform: cisco_ios
+    role: edge
+    site: lab
+    port: 22
+    tags:
+      - bgp
+
