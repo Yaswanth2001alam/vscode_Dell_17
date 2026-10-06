@@ -66,6 +66,9 @@ Network-Automation-Engineer-Course/
 |-- requirements.txt
 |-- requirements-lab.txt
 |-- inventory.example.yaml
+|-- protocols/
+|   |-- README.md
+|   `-- layer-1/ ... layer-7/
 |-- notes/
 |   |-- 01-network-foundations.md
 |   |-- 02-protocol-handbook.md
@@ -87,6 +90,8 @@ Network-Automation-Engineer-Course/
 |   |-- nornir_runner.py
 |   |-- netconf_ncclient.py
 |   `-- restconf_requests.py
+|-- tools/
+|   `-- generate_protocol_notes.py
 `-- tests/
     |-- test_layers.py
     |-- test_models.py
@@ -102,9 +107,129 @@ Network-Automation-Engineer-Course/
 5. [Testing, security, and production operations](notes/05-testing-and-operations.md)
 6. [Labs, projects, and interview guide](notes/06-labs-and-interview-guide.md)
 7. [OSI Layers 1-7 protocols, automation, and tests](notes/07-osi-layers-and-protocols.md)
+8. [Individual files for every protocol](protocols/README.md)
 
 Read the chapters in order on the first pass. Later, use the protocol and
 library chapters as field references.
+
+The individual protocol files are generated from the typed protocol catalog.
+Regenerate them after catalog or template changes:
+
+```powershell
+python -m tools.generate_protocol_notes
+```
+
+## Complete course file index
+
+### Course chapters
+
+1. [Network foundations](notes/01-network-foundations.md)
+2. [Protocol handbook](notes/02-protocol-handbook.md)
+3. [Python and data engineering](notes/03-python-and-data.md)
+4. [Automation libraries and interfaces](notes/04-automation-libraries.md)
+5. [Testing, security, and production operations](notes/05-testing-and-operations.md)
+6. [Labs, projects, and interview guide](notes/06-labs-and-interview-guide.md)
+7. [OSI Layers 1-7 protocols, automation, and tests](notes/07-osi-layers-and-protocols.md)
+8. [Generated individual protocol index](protocols/README.md)
+
+### Layer 1 - Physical protocols
+
+1. [Ethernet PHY](protocols/layer-1/ethernet-phy.md)
+2. [Wi-Fi PHY](protocols/layer-1/wi-fi-phy.md)
+
+### Layer 2 - Data Link protocols
+
+1. [Ethernet](protocols/layer-2/ethernet.md)
+2. [802.1Q VLAN](protocols/layer-2/802-1q.md)
+3. [STP, RSTP, and MST](protocols/layer-2/stp-rstp-mst.md)
+4. [LACP](protocols/layer-2/lacp.md)
+5. [LLDP](protocols/layer-2/lldp.md)
+6. [802.1X and EAPOL](protocols/layer-2/802-1x-eapol.md)
+7. [MACsec and MKA](protocols/layer-2/macsec-mka.md)
+8. [ARP](protocols/layer-2/arp.md)
+9. [MPLS](protocols/layer-2/mpls.md)
+10. [IS-IS](protocols/layer-2/is-is.md)
+
+### Layer 3 - Network protocols
+
+1. [IPv4](protocols/layer-3/ipv4.md)
+2. [IPv6](protocols/layer-3/ipv6.md)
+3. [ICMP and ICMPv6](protocols/layer-3/icmp-icmpv6.md)
+4. [OSPF](protocols/layer-3/ospf.md)
+5. [BGP](protocols/layer-3/bgp.md)
+6. [PIM](protocols/layer-3/pim.md)
+7. [VRRP](protocols/layer-3/vrrp.md)
+8. [GRE](protocols/layer-3/gre.md)
+9. [IPsec ESP](protocols/layer-3/ipsec-esp.md)
+
+### Layer 4 - Transport protocols
+
+1. [TCP](protocols/layer-4/tcp.md)
+2. [UDP](protocols/layer-4/udp.md)
+3. [SCTP](protocols/layer-4/sctp.md)
+4. [QUIC](protocols/layer-4/quic.md)
+
+### Layer 5 - Session protocols
+
+1. [RPC](protocols/layer-5/rpc.md)
+2. [SIP](protocols/layer-5/sip.md)
+3. [TLS](protocols/layer-5/tls.md)
+
+### Layer 6 - Presentation protocols and formats
+
+1. [ASN.1](protocols/layer-6/asn-1.md)
+2. [JSON, XML, and Protobuf](protocols/layer-6/json-xml-protobuf.md)
+
+### Layer 7 - Application protocols
+
+1. [DNS](protocols/layer-7/dns.md)
+2. [DHCPv4](protocols/layer-7/dhcpv4.md)
+3. [HTTP and HTTPS](protocols/layer-7/http-https.md)
+4. [SSH](protocols/layer-7/ssh.md)
+5. [NETCONF](protocols/layer-7/netconf.md)
+6. [RESTCONF](protocols/layer-7/restconf.md)
+7. [gNMI](protocols/layer-7/gnmi.md)
+8. [SNMP](protocols/layer-7/snmp.md)
+9. [NTP](protocols/layer-7/ntp.md)
+10. [Syslog](protocols/layer-7/syslog.md)
+11. [RADIUS](protocols/layer-7/radius.md)
+12. [TACACS+](protocols/layer-7/tacacs.md)
+13. [SMTP](protocols/layer-7/smtp.md)
+14. [FTP, TFTP, and SFTP](protocols/layer-7/ftp-tftp-sftp.md)
+
+Cross-layer protocols are stored under their lowest or primary OSI layer. Each
+individual file lists every layer relevant to that protocol.
+
+### Core Python modules
+
+- [Package exports](network_course/__init__.py)
+- [Inventory and result models](network_course/models.py)
+- [Reusable protocol validators](network_course/validators.py)
+- [Offline protocol check demonstration](network_course/protocol_checks.py)
+- [Typed protocol catalog](network_course/protocol_catalog.py)
+- [DNS, TCP, TLS, and HTTPS diagnostics](network_course/layer_diagnostics.py)
+
+### Automation library examples
+
+- [Netmiko CLI collection and gated configuration](examples/cli_netmiko.py)
+- [Paramiko SSH command execution](examples/ssh_paramiko.py)
+- [Nornir orchestration and result handling](examples/nornir_runner.py)
+- [NETCONF candidate and confirmed-commit workflow](examples/netconf_ncclient.py)
+- [RESTCONF GET and gated PATCH workflow](examples/restconf_requests.py)
+
+### Inventory, dependencies, and generation
+
+- [Sanitized example inventory](inventory.example.yaml)
+- [Core Python requirements](requirements.txt)
+- [Extended lab requirements](requirements-lab.txt)
+- [Individual protocol-note generator](tools/generate_protocol_notes.py)
+
+### Unit tests
+
+- [Inventory and result model tests](tests/test_models.py)
+- [Protocol validator tests](tests/test_validators.py)
+- [Layer catalog and diagnostic tests](tests/test_layers.py)
+- [Protocol-note generator tests](tests/test_protocol_note_generator.py)
 
 ## Setup
 
