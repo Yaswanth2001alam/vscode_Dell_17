@@ -1,0 +1,15 @@
+vlans:
+  -id: 10
+  name: USERS
+
+  -id: 20
+  name: SERVERS
+
+  -id: 30
+  name: DMZ
+
+  -id: 500
+  name: Management_IP_servers
+  
+
+  

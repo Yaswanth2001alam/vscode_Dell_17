@@ -1,0 +1,13 @@
+vlans:
+  -vlan_id: 10
+  name: USERS
+  interfaces:
+    -Gigabitethernet0/1
+    -Gigabitethernet0/2
+
+  -vlan_id: 20
+  name: SERVERS
+  interfaces:
+    -Gigabitethernet0/3
+
+    

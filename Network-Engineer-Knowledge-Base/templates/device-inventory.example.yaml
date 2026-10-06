@@ -1,0 +1,14 @@
+devices:
+  R1:
+    role: edge-router
+    platform: ios
+    management_ip: 192.0.2.11
+    credentials:
+      username_env: NET_USER
+      password_env: NET_PASS
+    interfaces:
+      loopback0:
+        ipv4: 198.51.100.1/32
+      transit_to_r2:
+        name: Ethernet1/1
+        ipv4: 198.51.100.4/30

@@ -1,0 +1,10 @@
+Hostname: CORE-SW01, IP: 10.10.1.1, Status: UP, Interface: Gi0/1, Uptime: 45d
+Hostname: CORE-SW02, IP: 10.10.1.2, Status: UP, Interface: Gi0/2, Uptime: 45d
+Hostname: ACCESS-SW01, IP: 10.10.2.1, Status: DOWN, Interface: Fa0/1, Uptime: 0d
+Hostname: ACCESS-SW02, IP: 10.10.2.2, Status: UP, Interface: Fa0/2, Uptime: 12d
+Hostname: ROUTER-EDGE1, IP: 10.10.0.1, Status: UP, Interface: Gi0/0, Uptime: 100d
+Hostname: ROUTER-EDGE2, IP: 10.10.0.2, Status: DOWN, Interface: Gi0/1, Uptime: 0d
+Hostname: FIREWALL-01, IP: 10.10.0.254, Status: UP, Interface: Eth0, Uptime: 200d
+Hostname: AP-FLOOR1, IP: 10.10.3.10, Status: UP, Interface: Wlan0, Uptime: 5d
+Hostname: AP-FLOOR2, IP: 10.10.3.11, Status: DOWN, Interface: Wlan0, Uptime: 0d
+Hostname: SERVER-DC1, IP: 10.10.5.1, Status: UP, Interface: Eth1, Uptime: 365d
