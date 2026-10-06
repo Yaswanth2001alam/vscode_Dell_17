@@ -1,0 +1,16 @@
+site: lab01
+
+devices:
+
+  -hostname: r1
+  os: ios
+  mgmt_ip: 10.0.0.1
+  role: router
+
+  -hostname: sw1
+  os: nxos
+  mgmt_ip: 10.0.0.2
+  role: switch
+
+
+  

@@ -1,0 +1,18 @@
+devices:
+  - name: rwa01
+    host: 10.20.1.11
+    vendor: cisco
+    platform: iosxr
+    port: 22
+
+  - name: ipr01
+    host: 10.20.1.21
+    vendor: juniper
+    platform: junos
+    port: 22
+
+  - name: ewa01
+    host: 10.20.1.31
+    vendor: arista
+    platform: eos
+    port: 22

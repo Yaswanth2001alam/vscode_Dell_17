@@ -1,0 +1,78 @@
+# =============================================================
+#  EVE-NG Lab Testbed — Cisco IOS-XRv PE Routers
+#  Management subnet: 192.168.100.0/24 (pnet0 / Cloud0)
+#  Adjust IPs, hostnames, and credentials to match your lab.
+# =============================================================
+
+testbed:
+  name: eve-ng-xrv-lab
+  credentials:
+    default:
+      username: "%ENV{NET_USER}"    # export NET_USER=admin
+      password: "%ENV{NET_PASS}"    # export NET_PASS=admin
+    enable:
+      password: "%ENV{NET_PASS}"
+
+devices:
+
+  # ── PE Router 1 ───────────────────────────────────────────
+  XRv-PE1:
+    alias: pe1
+    os: iosxr
+    type: router
+    platform: iosxrv
+    credentials:
+      default:
+        username: "%ENV{NET_USER}"
+        password: "%ENV{NET_PASS}"
+    connections:
+      defaults:
+        class: unicon.Unicon
+      cli:
+        protocol: ssh
+        ip: 192.168.100.10      # <-- change to your EVE-NG pnet0 IP
+        port: 22
+
+  # ── PE Router 2 ───────────────────────────────────────────
+  XRv-PE2:
+    alias: pe2
+    os: iosxr
+    type: router
+    platform: iosxrv
+    credentials:
+      default:
+        username: "%ENV{NET_USER}"
+        password: "%ENV{NET_PASS}"
+    connections:
+      defaults:
+        class: unicon.Unicon
+      cli:
+        protocol: ssh
+        ip: 192.168.100.11      # <-- change to your EVE-NG pnet0 IP
+        port: 22
+
+topology:
+  XRv-PE1:
+    interfaces:
+      GigabitEthernet0/0/0/0:
+        link: pe1-pe2-link
+        type: ethernet
+        ipv4: 10.1.1.1/30
+      GigabitEthernet0/0/0/1:
+        link: pe1-ce-link
+        type: ethernet
+      Bundle-Ether1:
+        link: pe1-bundle1
+        type: portchannel
+  XRv-PE2:
+    interfaces:
+      GigabitEthernet0/0/0/0:
+        link: pe1-pe2-link
+        type: ethernet
+        ipv4: 10.1.1.2/30
+      GigabitEthernet0/0/0/1:
+        link: pe2-ce-link
+        type: ethernet
+      Bundle-Ether1:
+        link: pe2-bundle1
+        type: portchannel

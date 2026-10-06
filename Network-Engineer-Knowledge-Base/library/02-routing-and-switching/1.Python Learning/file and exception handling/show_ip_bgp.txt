@@ -1,0 +1,4 @@
+BGP router identifier 10.255.1.1
+Neighbor        State        Prefixes
+10.3.159.125    Established  2450
+10.3.159.126    Idle         0

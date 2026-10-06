@@ -1,0 +1,18 @@
+device:
+  hostname: r1
+  vendor: cisco
+  model: ios-xe
+  mgmt_ip: 10.10.10.1
+
+  hostname: r2
+  vendor: juniper
+  model: ptx100
+  mgmt_ip: 20.0.0.2
+
+  hostname: r3
+  vendor: arista
+  model: Eos_10.01
+  mgmt_ip: 30.0.0.5
+
+
+  
