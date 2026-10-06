@@ -72,10 +72,13 @@ Network-Automation-Engineer-Course/
 |   |-- 03-python-and-data.md
 |   |-- 04-automation-libraries.md
 |   |-- 05-testing-and-operations.md
-|   `-- 06-labs-and-interview-guide.md
+|   |-- 06-labs-and-interview-guide.md
+|   `-- 07-osi-layers-and-protocols.md
 |-- network_course/
 |   |-- __init__.py
+|   |-- layer_diagnostics.py
 |   |-- models.py
+|   |-- protocol_catalog.py
 |   |-- validators.py
 |   `-- protocol_checks.py
 |-- examples/
@@ -85,6 +88,7 @@ Network-Automation-Engineer-Course/
 |   |-- netconf_ncclient.py
 |   `-- restconf_requests.py
 `-- tests/
+    |-- test_layers.py
     |-- test_models.py
     `-- test_validators.py
 ```
@@ -97,6 +101,7 @@ Network-Automation-Engineer-Course/
 4. [Automation libraries and interfaces](notes/04-automation-libraries.md)
 5. [Testing, security, and production operations](notes/05-testing-and-operations.md)
 6. [Labs, projects, and interview guide](notes/06-labs-and-interview-guide.md)
+7. [OSI Layers 1-7 protocols, automation, and tests](notes/07-osi-layers-and-protocols.md)
 
 Read the chapters in order on the first pass. Later, use the protocol and
 library chapters as field references.
@@ -111,6 +116,17 @@ Set-Location "Network-Automation-Engineer-Course"
 python -m unittest discover -s tests -v
 python -m network_course.protocol_checks
 ```
+
+Run a safe, bounded live diagnostic against one hostname you are authorized to
+test:
+
+```powershell
+python -m network_course.layer_diagnostics example.com --port 443 --path /
+```
+
+This checks DNS (Layer 7), TCP (Layer 4), TLS (Layers 5-6), and HTTPS (Layer 7).
+Physical, switching, and routing state must be collected from authorized network
+devices using the library examples and validated using the included contracts.
 
 Create an isolated environment before installing automation libraries:
 
