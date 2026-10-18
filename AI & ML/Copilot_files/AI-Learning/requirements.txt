@@ -1,0 +1,12 @@
+# Core learning environment. Install into the Python environment selected by Jupyter.
+jupyter
+ipykernel
+numpy
+pandas
+matplotlib
+scikit-learn
+python-dotenv
+
+# Optional: the setup notebook detects PyTorch when it is already installed.
+# Choose a platform-appropriate PyTorch installation from its official instructions.
+# torch
