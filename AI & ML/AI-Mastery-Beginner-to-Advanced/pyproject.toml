@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-mastery-course"
+version = "0.1.0"
+description = "Reproducible, practice-first AI course demonstrations"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+notebooks = [
+    "jupyter>=1.0",
+    "ipykernel>=6.29",
+    "matplotlib>=3.8",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "07_Artificial_Intelligence_Fundamentals/tests"]
+python_files = ["test_*.py"]
+
+[tool.setuptools]
+py-modules = []

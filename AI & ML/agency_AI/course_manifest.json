@@ -1,0 +1,1105 @@
+{
+  "title": "AI from Python foundations to modern systems",
+  "research_snapshot": "2026-10-17",
+  "minimum_python": "3.11",
+  "tested_python": "3.13.14",
+  "dependencies": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "matplotlib": "3.10.8",
+    "scikit-learn": "1.8.0",
+    "torch": "2.12.0",
+    "pydantic": "2.12.5",
+    "fastapi": "0.141.1",
+    "httpx": "0.28.1",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "6.31.0"
+  },
+  "file_limit_bytes": 262144,
+  "offline": true,
+  "images": [
+    "images/ai_map.png",
+    "images/lifecycle.png",
+    "images/neuron.png",
+    "images/attention.png",
+    "images/rag.png"
+  ],
+  "lessons": [
+    {
+      "number": 1,
+      "title": "What AI is: AI, ML, deep learning, and generative AI",
+      "level": "Beginner",
+      "concepts": [
+        "Artificial intelligence",
+        "AI vs ML vs deep learning vs generative AI",
+        "Narrow AI",
+        "General AI",
+        "Models",
+        "Training",
+        "Inference",
+        "Datasets",
+        "Features",
+        "Labels",
+        "Parameters",
+        "Predictions"
+      ],
+      "notebook": "01_AI_Foundations.ipynb",
+      "script": "examples/01_AI_Foundations.py",
+      "examples": 2,
+      "expected_stdout": [
+        "learned parameters: 10.0 10.0\ninference latency_ms: 15.0\n",
+        "category: high numeric: 15.0\ntemplate, not a learned generator: edge-01 has high latency.\n"
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Python variables, strings, and containers",
+      "level": "Beginner",
+      "concepts": [
+        "Variables",
+        "Strings",
+        "Lists",
+        "Tuples",
+        "Sets",
+        "Dictionaries",
+        "Mutability"
+      ],
+      "notebook": "02_Python_Variables_Strings_and_Containers.ipynb",
+      "script": "examples/02_Python_Variables_Strings_and_Containers.py",
+      "examples": 1,
+      "expected_stdout": [
+        "edge-01: 12.5 ms\nroles: ['core', 'edge']\n"
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Conditions, loops, functions, lambda, and OOP",
+      "level": "Beginner",
+      "concepts": [
+        "Conditions",
+        "Loops",
+        "Functions",
+        "lambda",
+        "Classes",
+        "OOP",
+        "Exceptions"
+      ],
+      "notebook": "03_Python_Control_Functions_and_OOP.ipynb",
+      "script": "examples/03_Python_Control_Functions_and_OOP.py",
+      "examples": 2,
+      "expected_stdout": [
+        "latency cannot be negative\nsorted: [{'ms': 5}, {'ms': 20}] labels: [0, 1, 1]\n",
+        "same service, independently injected policies\n"
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Files, JSON, and explicit data boundaries",
+      "level": "Beginner",
+      "concepts": [
+        "File handling",
+        "JSON",
+        "Context managers",
+        "Data validation"
+      ],
+      "notebook": "04_Files_JSON_and_Data_Validation.ipynb",
+      "script": "examples/04_Files_JSON_and_Data_Validation.py",
+      "examples": 1,
+      "expected_stdout": [
+        "invalid record rejected\n{'hostname': 'edge-01', 'latency_ms': 12.5}\n"
+      ]
+    },
+    {
+      "number": 5,
+      "title": "HTTP, REST APIs, and async programming",
+      "level": "Beginner to intermediate",
+      "concepts": [
+        "HTTP",
+        "REST APIs",
+        "Async programming",
+        "Timeouts",
+        "Mock HTTP"
+      ],
+      "notebook": "05_HTTP_REST_and_Async.ipynb",
+      "script": "examples/05_HTTP_REST_and_Async.py",
+      "examples": 1,
+      "expected_stdout": [
+        "mock HTTP labels: [0, 1]\n"
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Virtual environments, pip, and Jupyter",
+      "level": "Beginner",
+      "concepts": [
+        "Virtual environments",
+        "pip",
+        "Jupyter",
+        "Kernels",
+        "Reproducibility"
+      ],
+      "notebook": "06_Environments_Pip_and_Jupyter.ipynb",
+      "script": "examples/06_Environments_Pip_and_Jupyter.py",
+      "examples": 1,
+      "expected_stdout": [
+        "Python: 3.13.14\nVirtual environment: False\nPackages: {'numpy': '2.3.5', 'pandas': '3.0.1', 'scikit-learn': '1.8.0', 'torch': '2.12.0'}\n"
+      ]
+    },
+    {
+      "number": 7,
+      "title": "NumPy arrays, shapes, broadcasting, and vectorization",
+      "level": "Beginner",
+      "concepts": [
+        "NumPy",
+        "Arrays",
+        "Shapes",
+        "Broadcasting",
+        "Matrix multiplication",
+        "Random seeds"
+      ],
+      "notebook": "07_NumPy_Arrays_and_Vectorization.ipynb",
+      "script": "examples/07_NumPy_Arrays_and_Vectorization.py",
+      "examples": 1,
+      "expected_stdout": [
+        "shape: (3, 2) predictions: [8.0, 15.0, 24.0]\ncolumn means after scaling: [0.0, -0.0]\n"
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Pandas tables and exploratory data analysis",
+      "level": "Beginner",
+      "concepts": [
+        "Pandas",
+        "DataFrames",
+        "Missing values",
+        "Grouping",
+        "EDA"
+      ],
+      "notebook": "08_Pandas_DataFrames_and_EDA.ipynb",
+      "script": "examples/08_Pandas_DataFrames_and_EDA.py",
+      "examples": 1,
+      "expected_stdout": [
+        "missing: {'site': 0, 'latency_ms': 1, 'outage': 0}\nsite means: {'a': 15.0, 'b': 40.0}\n"
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Matplotlib and visual reasoning",
+      "level": "Beginner",
+      "concepts": [
+        "Matplotlib",
+        "Visualization",
+        "Residuals",
+        "Plot axes"
+      ],
+      "notebook": "09_Matplotlib_and_Visual_Reasoning.ipynb",
+      "script": "examples/09_Matplotlib_and_Visual_Reasoning.py",
+      "examples": 1,
+      "expected_stdout": [
+        "PNG generated in memory; MAE: 0.25\n"
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Vectors, probability, losses, and optimization",
+      "level": "Beginner to intermediate",
+      "concepts": [
+        "Linear algebra",
+        "Probability",
+        "Expected value",
+        "Loss",
+        "Gradient descent",
+        "Logarithms"
+      ],
+      "notebook": "10_Math_Probability_and_Optimization.ipynb",
+      "script": "examples/10_Math_Probability_and_Optimization.py",
+      "examples": 1,
+      "expected_stdout": [
+        "optimized weight: 3.0 loss decreased: True\nprobabilities: [0.09, 0.245, 0.665]\n"
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Datasets, supervision, and train/validation/test splits",
+      "level": "Beginner to intermediate",
+      "concepts": [
+        "Classification vs regression",
+        "Supervised learning",
+        "Unsupervised learning",
+        "Reinforcement learning",
+        "Train data",
+        "Validation data",
+        "Test data",
+        "Leakage",
+        "Self-supervised learning",
+        "Semi-supervised learning"
+      ],
+      "notebook": "11_Datasets_Supervision_and_Data_Splits.ipynb",
+      "script": "examples/11_Datasets_Supervision_and_Data_Splits.py",
+      "examples": 1,
+      "expected_stdout": [
+        "train/validation/test: 120 40 40\nfeature shape: (200, 6) target shape: (200,)\n"
+      ]
+    },
+    {
+      "number": 12,
+      "title": "Preprocessing and leakage-safe pipelines",
+      "level": "Intermediate",
+      "concepts": [
+        "Imputation",
+        "Scaling",
+        "One-hot encoding",
+        "ColumnTransformer",
+        "Pipeline",
+        "Data leakage"
+      ],
+      "notebook": "12_Preprocessing_and_Leakage_Safe_Pipelines.ipynb",
+      "script": "examples/12_Preprocessing_and_Leakage_Safe_Pipelines.py",
+      "examples": 1,
+      "expected_stdout": [
+        "new-site probabilities: [[0.334, 0.666]]\n"
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Linear regression and numerical prediction",
+      "level": "Intermediate",
+      "concepts": [
+        "Linear regression",
+        "Regression",
+        "Coefficients",
+        "MAE",
+        "Ridge regression"
+      ],
+      "notebook": "13_Linear_Regression.ipynb",
+      "script": "examples/13_Linear_Regression.py",
+      "examples": 2,
+      "expected_stdout": [
+        "coefficients: [0.303, 0.099]\ntest MAE: 0.892 baseline MAE: 7.544\n",
+        "learned slope: 3.0 loss decreased: True\n"
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Logistic regression and classification probabilities",
+      "level": "Intermediate",
+      "concepts": [
+        "Logistic regression",
+        "Classification",
+        "Sigmoid",
+        "Decision thresholds",
+        "Probabilities"
+      ],
+      "notebook": "14_Logistic_Regression.ipynb",
+      "script": "examples/14_Logistic_Regression.py",
+      "examples": 2,
+      "expected_stdout": [
+        "first probabilities: [0.893, 0.008, 0.165]\nheld-out accuracy: 0.853\n",
+        "probabilities: [0.119, 0.5, 0.881] labels: [0, 1, 1]\n"
+      ]
+    },
+    {
+      "number": 15,
+      "title": "Decision trees and rule-like decisions",
+      "level": "Intermediate",
+      "concepts": [
+        "Decision trees",
+        "Gini impurity",
+        "Depth",
+        "Pruning",
+        "Interpretability"
+      ],
+      "notebook": "15_Decision_Trees.ipynb",
+      "script": "examples/15_Decision_Trees.py",
+      "examples": 1,
+      "expected_stdout": [
+        "held-out accuracy: 0.973\n|--- feature_1 <= 0.29\n|   |--- feature_0 <= -0.86\n|   |   |--- truncated branch of depth 2\n|   |--- feature_0 >  -0.86\n|   |   |--- truncated branch of depth 2\n|--- feature_1 >  0.29\n|   |--- feature_3 <= 0.60\n|   |   |--- class: 1\n|   |--- feature_3 >  0.60\n|   |   |--- truncated branch of depth 2\n"
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Random forests and bagging",
+      "level": "Intermediate",
+      "concepts": [
+        "Random forests",
+        "Bagging",
+        "Bootstrap",
+        "Variance reduction",
+        "Feature importance"
+      ],
+      "notebook": "16_Random_Forests.ipynb",
+      "script": "examples/16_Random_Forests.py",
+      "examples": 1,
+      "expected_stdout": [
+        "held-out accuracy: 0.907\npermutation importance: [0.013, 0.036, 0.169, -0.009, -0.004]\n"
+      ]
+    },
+    {
+      "number": 17,
+      "title": "Gradient boosting on tabular data",
+      "level": "Intermediate",
+      "concepts": [
+        "Gradient boosting",
+        "Residual fitting",
+        "Learning rate",
+        "Tree ensembles"
+      ],
+      "notebook": "17_Gradient_Boosting.ipynb",
+      "script": "examples/17_Gradient_Boosting.py",
+      "examples": 1,
+      "expected_stdout": [
+        "test MAE: 0.19 baseline: 1.177\n"
+      ]
+    },
+    {
+      "number": 18,
+      "title": "K-nearest neighbors and support vector machines",
+      "level": "Intermediate",
+      "concepts": [
+        "K-nearest neighbors",
+        "KNN",
+        "Support vector machines",
+        "SVM",
+        "Kernels",
+        "Distance"
+      ],
+      "notebook": "18_KNN_and_Support_Vector_Machines.ipynb",
+      "script": "examples/18_KNN_and_Support_Vector_Machines.py",
+      "examples": 1,
+      "expected_stdout": [
+        "held-out accuracies: {'knn': 0.983, 'svm': 0.983}\n"
+      ]
+    },
+    {
+      "number": 19,
+      "title": "Naive Bayes and text classification",
+      "level": "Intermediate",
+      "concepts": [
+        "Naive Bayes",
+        "Bayes theorem",
+        "Conditional independence",
+        "Text classification"
+      ],
+      "notebook": "19_Naive_Bayes_and_Text_Classification.ipynb",
+      "script": "examples/19_Naive_Bayes_and_Text_Classification.py",
+      "examples": 1,
+      "expected_stdout": [
+        "labels: [1, 0]\nprobabilities: [[0.143, 0.857], [0.947, 0.053]]\n"
+      ]
+    },
+    {
+      "number": 20,
+      "title": "Accuracy, precision, recall, F1, and calibration",
+      "level": "Intermediate",
+      "concepts": [
+        "Accuracy",
+        "Precision",
+        "Recall",
+        "F1",
+        "Confusion matrix",
+        "ROC AUC",
+        "PR AUC",
+        "Calibration"
+      ],
+      "notebook": "20_Metrics_Thresholds_and_Calibration.ipynb",
+      "script": "examples/20_Metrics_Thresholds_and_Calibration.py",
+      "examples": 2,
+      "expected_stdout": [
+        "confusion matrix: [[2, 1], [1, 2]]\naccuracy/precision/recall/F1: [0.667, 0.667, 0.667, 0.667]\n",
+        "accuracy: 0.99 incident recall: 0.0 incident F1: 0.0\n"
+      ]
+    },
+    {
+      "number": 21,
+      "title": "Bias, variance, overfitting, and model selection",
+      "level": "Intermediate",
+      "concepts": [
+        "Bias",
+        "Variance",
+        "Overfitting",
+        "Underfitting",
+        "Regularization",
+        "Cross-validation",
+        "Hyperparameters"
+      ],
+      "notebook": "21_Bias_Variance_Overfitting_and_Tuning.ipynb",
+      "script": "examples/21_Bias_Variance_Overfitting_and_Tuning.py",
+      "examples": 1,
+      "expected_stdout": [
+        "selected: {'poly__degree': 2, 'ridge__alpha': 0.01}\ntest MAE: 0.113\n"
+      ]
+    },
+    {
+      "number": 22,
+      "title": "Unsupervised clustering: K-means and DBSCAN",
+      "level": "Intermediate",
+      "concepts": [
+        "Unsupervised learning",
+        "K-means",
+        "DBSCAN",
+        "Clustering",
+        "Silhouette",
+        "Adjusted Rand index"
+      ],
+      "notebook": "22_KMeans_and_DBSCAN.ipynb",
+      "script": "examples/22_KMeans_and_DBSCAN.py",
+      "examples": 2,
+      "expected_stdout": [
+        "external synthetic agreement: 1.0\nDBSCAN noise points: 1\n",
+        "assignments: [0, 0, 1, 1] updated centroids: [[0.0, 1.0], [10.0, 11.0]]\n"
+      ]
+    },
+    {
+      "number": 23,
+      "title": "PCA and dimensionality reduction",
+      "level": "Intermediate",
+      "concepts": [
+        "PCA",
+        "Dimensionality reduction",
+        "SVD",
+        "Explained variance",
+        "Reconstruction"
+      ],
+      "notebook": "23_PCA_and_Dimensionality_Reduction.ipynb",
+      "script": "examples/23_PCA_and_Dimensionality_Reduction.py",
+      "examples": 1,
+      "expected_stdout": [
+        "retained variance: 0.9983\nreconstruction MSE: 0.0017\n"
+      ]
+    },
+    {
+      "number": 24,
+      "title": "Isolation Forest and anomaly detection",
+      "level": "Intermediate",
+      "concepts": [
+        "Isolation Forest",
+        "Anomaly detection",
+        "Novelty detection",
+        "Contamination",
+        "Drift"
+      ],
+      "notebook": "24_Isolation_Forest_and_Anomaly_Detection.ipynb",
+      "script": "examples/24_Isolation_Forest_and_Anomaly_Detection.py",
+      "examples": 1,
+      "expected_stdout": [
+        "decision scores: [0.181, -0.172]\ninlier/outlier labels: [1, -1]\n"
+      ]
+    },
+    {
+      "number": 25,
+      "title": "Reinforcement learning and exploration with bandits",
+      "level": "Intermediate",
+      "concepts": [
+        "Reinforcement learning",
+        "Agent",
+        "Environment",
+        "Action",
+        "Reward",
+        "Policy",
+        "Exploration",
+        "Bandits"
+      ],
+      "notebook": "25_Reinforcement_Learning_and_Bandits.ipynb",
+      "script": "examples/25_Reinforcement_Learning_and_Bandits.py",
+      "examples": 2,
+      "expected_stdout": [
+        "value estimates: [0.204, 0.524, 0.797]\naction counts: [152, 84, 1564] mean reward: 0.734\n",
+        "immediate gamma=.9: 1.0\ndelayed gamma=.9: 1.62\n"
+      ]
+    },
+    {
+      "number": 26,
+      "title": "Q-learning, states, and discounted returns",
+      "level": "Intermediate to advanced",
+      "concepts": [
+        "Q-learning",
+        "MDP",
+        "State",
+        "Transition",
+        "Discount factor",
+        "Bellman target",
+        "Terminal state"
+      ],
+      "notebook": "26_Q_Learning_and_MDPs.ipynb",
+      "script": "examples/26_Q_Learning_and_MDPs.py",
+      "examples": 1,
+      "expected_stdout": [
+        "greedy path: [0, 1, 2, 3]\nstate-zero Q: [0.8, 0.863]\n"
+      ]
+    },
+    {
+      "number": 27,
+      "title": "Neurons, backpropagation, and autograd",
+      "level": "Intermediate",
+      "concepts": [
+        "Neural networks",
+        "Neuron",
+        "Activation",
+        "Backpropagation",
+        "Autograd",
+        "Gradient descent"
+      ],
+      "notebook": "27_Neurons_Backpropagation_and_Autograd.ipynb",
+      "script": "examples/27_Neurons_Backpropagation_and_Autograd.py",
+      "examples": 1,
+      "expected_stdout": [
+        "gradient: -24.0 loss before/after: 36.0 1.44\n"
+      ]
+    },
+    {
+      "number": 28,
+      "title": "Train a multilayer neural network with PyTorch",
+      "level": "Intermediate",
+      "concepts": [
+        "PyTorch",
+        "MLP",
+        "Training loop",
+        "Optimizer",
+        "Cross-entropy",
+        "Inference mode"
+      ],
+      "notebook": "28_Training_a_PyTorch_MLP.ipynb",
+      "script": "examples/28_Training_a_PyTorch_MLP.py",
+      "examples": 1,
+      "expected_stdout": [
+        "training loss: 0.622 -> 0.007\nheld-out accuracy: 1.0\n"
+      ]
+    },
+    {
+      "number": 29,
+      "title": "Convolutional neural networks and image features",
+      "level": "Intermediate",
+      "concepts": [
+        "CNN",
+        "Convolution",
+        "Channels",
+        "Filters",
+        "Pooling",
+        "Images"
+      ],
+      "notebook": "29_Convolutional_Neural_Networks.ipynb",
+      "script": "examples/29_Convolutional_Neural_Networks.py",
+      "examples": 2,
+      "expected_stdout": [
+        "feature shape: (1, 1, 3, 3) pooled response: 3.0\n",
+        "synthetic stripe held-out accuracy: 1.0\n"
+      ]
+    },
+    {
+      "number": 30,
+      "title": "RNNs, sequence modeling, and encoder-decoder ideas",
+      "level": "Intermediate",
+      "concepts": [
+        "RNN",
+        "LSTM",
+        "GRU",
+        "Sequences",
+        "Sequence-to-sequence",
+        "Teacher forcing"
+      ],
+      "notebook": "30_RNNs_Sequences_and_Seq2Seq.ipynb",
+      "script": "examples/30_RNNs_Sequences_and_Seq2Seq.py",
+      "examples": 1,
+      "expected_stdout": [
+        "encoder: (3, 5, 6) hidden: (1, 3, 6)\nper-position vocabulary logits: (3, 5, 8)\n"
+      ]
+    },
+    {
+      "number": 31,
+      "title": "Transfer learning and frozen feature extractors",
+      "level": "Intermediate",
+      "concepts": [
+        "Transfer learning",
+        "Pretrained features",
+        "Fine-tuning",
+        "Frozen layers",
+        "Domain shift"
+      ],
+      "notebook": "31_Transfer_Learning_and_Frozen_Features.ipynb",
+      "script": "examples/31_Transfer_Learning_and_Frozen_Features.py",
+      "examples": 1,
+      "expected_stdout": [
+        "source loss: 0.007 target loss: 0.037\nfrozen encoder unchanged\n"
+      ]
+    },
+    {
+      "number": 32,
+      "title": "NLP preprocessing, normalization, stemming, and lemmatization",
+      "level": "Intermediate",
+      "concepts": [
+        "NLP",
+        "Text preprocessing",
+        "Normalization",
+        "Tokenization",
+        "Stemming",
+        "Lemmatization"
+      ],
+      "notebook": "32_NLP_Normalization_Stemming_and_Lemmas.ipynb",
+      "script": "examples/32_NLP_Normalization_Stemming_and_Lemmas.py",
+      "examples": 1,
+      "expected_stdout": [
+        "tokens: ['edge-01', 'devices', 'were', 'running', 'not', 'failed']\ntoy stems: ['edge-01', 'device', 'were', 'running', 'not', 'failed']\ndictionary lemmas: ['edge-01', 'device', 'be', 'run', 'not', 'failed']\n"
+      ]
+    },
+    {
+      "number": 33,
+      "title": "Bag-of-words, TF-IDF, and text classification",
+      "level": "Intermediate",
+      "concepts": [
+        "Bag-of-words",
+        "TF-IDF",
+        "Text classification",
+        "Sentiment analysis",
+        "Sparse vectors"
+      ],
+      "notebook": "33_Bag_of_Words_TFIDF_and_Sentiment.ipynb",
+      "script": "examples/33_Bag_of_Words_TFIDF_and_Sentiment.py",
+      "examples": 1,
+      "expected_stdout": [
+        "toy sentiment labels: [1, 0]\nsparse feature shape: (6, 24)\n"
+      ]
+    },
+    {
+      "number": 34,
+      "title": "Embeddings, semantic similarity, and named entities",
+      "level": "Intermediate",
+      "concepts": [
+        "Embeddings",
+        "Vector representations",
+        "Semantic similarity",
+        "Cosine similarity",
+        "Named entity recognition"
+      ],
+      "notebook": "34_Embeddings_Similarity_and_Named_Entities.ipynb",
+      "script": "examples/34_Embeddings_Similarity_and_Named_Entities.py",
+      "examples": 3,
+      "expected_stdout": [
+        "handcrafted similarities: [1.0, 0.995, 0.0]\npattern-based entities: [('edge-01', 0, 7), ('core-02', 27, 34)]\n",
+        "learned lexical embedding shape: (6, 2)\nrouter-switch / router-garden similarity: 1.0 -0.0\n",
+        "synthetic token entity labels: [('edge-99', 'HOST'), ('reported', 'O'), ('core-88', 'HOST')]\n"
+      ]
+    },
+    {
+      "number": 35,
+      "title": "Attention, self-attention, and causal masking",
+      "level": "Intermediate to advanced",
+      "concepts": [
+        "Attention",
+        "Self-attention",
+        "Queries",
+        "Keys",
+        "Values",
+        "Causal mask",
+        "Multi-head attention"
+      ],
+      "notebook": "35_Attention_and_Causal_Masking.ipynb",
+      "script": "examples/35_Attention_and_Causal_Masking.py",
+      "examples": 1,
+      "expected_stdout": [
+        "attention weights: [[1.0, 0.0, 0.0], [0.33, 0.67, 0.0], [0.248, 0.248, 0.503]]\noutput shape: (3, 2)\n"
+      ]
+    },
+    {
+      "number": 36,
+      "title": "Transformer blocks and positional information",
+      "level": "Advanced",
+      "concepts": [
+        "Transformers",
+        "Transformer blocks",
+        "Multi-head attention",
+        "Positional information",
+        "Residual connections",
+        "Layer normalization",
+        "Encoder vs decoder"
+      ],
+      "notebook": "36_Transformer_Blocks_and_Positions.ipynb",
+      "script": "examples/36_Transformer_Blocks_and_Positions.py",
+      "examples": 1,
+      "expected_stdout": [
+        "block shape: (1, 5, 8) earlier positions unchanged\n"
+      ]
+    },
+    {
+      "number": 37,
+      "title": "Tokens, subword tokenization, and context windows",
+      "level": "Intermediate",
+      "concepts": [
+        "LLM",
+        "Tokens",
+        "Tokenization",
+        "Subword tokenization",
+        "BPE",
+        "Context window",
+        "Token budget"
+      ],
+      "notebook": "37_Tokens_Subwords_and_Context_Windows.ipynb",
+      "script": "examples/37_Tokens_Subwords_and_Context_Windows.py",
+      "examples": 1,
+      "expected_stdout": [
+        "overflow rejected\nlearned toy merge: ('l', 'o') tokens: ['lo', 'w', 'e', 'r']\n"
+      ]
+    },
+    {
+      "number": 38,
+      "title": "Language models, pretraining, and next-token prediction",
+      "level": "Advanced",
+      "concepts": [
+        "LLM",
+        "Pretraining",
+        "Next-token prediction",
+        "Language modeling",
+        "Cross-entropy",
+        "Perplexity"
+      ],
+      "notebook": "38_Language_Model_Pretraining_and_Next_Tokens.ipynb",
+      "script": "examples/38_Language_Model_Pretraining_and_Next_Tokens.py",
+      "examples": 2,
+      "expected_stdout": [
+        "training loss: 0.831 -> 0.006\nlearned transitions: {'a': 'b', 'b': 'c', 'c': 'a'}\n",
+        "tiny transformer's training loss: 1.501 -> 0.0\ntrained on a repeating synthetic pattern, not natural language\n"
+      ]
+    },
+    {
+      "number": 39,
+      "title": "Inference, temperature, top-p, and generation",
+      "level": "Intermediate to advanced",
+      "concepts": [
+        "Model inference",
+        "Temperature",
+        "Top-P",
+        "Top-k",
+        "Sampling",
+        "Autoregressive generation"
+      ],
+      "notebook": "39_Inference_Temperature_TopP_and_Generation.ipynb",
+      "script": "examples/39_Inference_Temperature_TopP_and_Generation.py",
+      "examples": 1,
+      "expected_stdout": [
+        "top-p retained: [0, 1] renormalized: [0.667, 0.333]\nsampled token IDs: [1, 0, 1, 1, 0, 1, 1, 1, 0, 0]\n"
+      ]
+    },
+    {
+      "number": 40,
+      "title": "System/user prompts, context, and model boundaries",
+      "level": "Intermediate",
+      "concepts": [
+        "System prompt",
+        "User prompt",
+        "Context window",
+        "Prompt design",
+        "Reasoning",
+        "Knowledge boundaries",
+        "Open-weight models",
+        "Hosted models",
+        "Model limitations"
+      ],
+      "notebook": "40_Prompts_Context_and_Model_Boundaries.ipynb",
+      "script": "examples/40_Prompts_Context_and_Model_Boundaries.py",
+      "examples": 1,
+      "expected_stdout": [
+        "request constructed; no model called\nevidence IDs: ['lab-policy-1']\n"
+      ]
+    },
+    {
+      "number": 41,
+      "title": "Structured output, JSON, and safe tool calling",
+      "level": "Intermediate",
+      "concepts": [
+        "Structured output",
+        "JSON output",
+        "Function calling",
+        "Tool calling",
+        "Pydantic",
+        "Validation"
+      ],
+      "notebook": "41_Structured_Output_and_Tool_Calling.ipynb",
+      "script": "examples/41_Structured_Output_and_Tool_Calling.py",
+      "examples": 2,
+      "expected_stdout": [
+        "wrong argument type rejected\n{'free': 36}\n",
+        "requests rejected before execution: 2\n"
+      ]
+    },
+    {
+      "number": 42,
+      "title": "Retrieval-augmented generation and evidence",
+      "level": "Intermediate to advanced",
+      "concepts": [
+        "RAG",
+        "Retrieval",
+        "Chunking",
+        "Vector search",
+        "Citations",
+        "Abstention"
+      ],
+      "notebook": "42_Retrieval_Augmented_Generation.ipynb",
+      "script": "examples/42_Retrieval_Augmented_Generation.py",
+      "examples": 1,
+      "expected_stdout": [
+        "{'answer': 'The lab interface MTU is 1500 bytes.', 'sources': ['mtu-policy']}\n{'answer': 'unknown', 'sources': []}\n"
+      ]
+    },
+    {
+      "number": 43,
+      "title": "Hallucinations, reasoning checks, and LLM evaluation",
+      "level": "Advanced",
+      "concepts": [
+        "Hallucination",
+        "Factual reliability",
+        "Reasoning",
+        "LLM evaluation",
+        "Groundedness",
+        "Regression tests"
+      ],
+      "notebook": "43_LLM_Evaluation_Hallucinations_and_Reliability.ipynb",
+      "script": "examples/43_LLM_Evaluation_Hallucinations_and_Reliability.py",
+      "examples": 1,
+      "expected_stdout": [
+        "per-case evaluation: [{'id': 'known', 'correct': False, 'grounded': False, 'passed': False}, {'id': 'unknown', 'correct': True, 'grounded': True, 'passed': True}]\nmock-output pass rate: 0.5\n"
+      ]
+    },
+    {
+      "number": 44,
+      "title": "Fine-tuning, LoRA, distillation, and preference learning",
+      "level": "Advanced",
+      "concepts": [
+        "Fine-tuning",
+        "SFT",
+        "LoRA",
+        "QLoRA",
+        "Distillation",
+        "RLHF",
+        "DPO",
+        "Post-training"
+      ],
+      "notebook": "44_FineTuning_LoRA_Distillation_and_Preferences.ipynb",
+      "script": "examples/44_FineTuning_LoRA_Distillation_and_Preferences.py",
+      "examples": 3,
+      "expected_stdout": [
+        "base/adapter parameters: 48 14\nloss: 2.7958 -> 0.0\n",
+        "synthetic teacher/student KL loss: 1.4498 -> 0.0\n",
+        "weak/improved pairwise loss: 0.7444 0.5981\n"
+      ]
+    },
+    {
+      "number": 45,
+      "title": "Quantization, KV cache, and inference optimization",
+      "level": "Advanced",
+      "concepts": [
+        "Quantization",
+        "Inference optimization",
+        "KV cache",
+        "Batching",
+        "Prefill",
+        "Decode",
+        "Memory"
+      ],
+      "notebook": "45_Quantization_KV_Cache_and_Inference_Cost.ipynb",
+      "script": "examples/45_Quantization_KV_Cache_and_Inference_Cost.py",
+      "examples": 1,
+      "expected_stdout": [
+        "float/int8 payload bytes: 4096 1024 (scale metadata additional)\nmaximum weight error: 0.00287\nexample KV estimate MiB: 24.0\n"
+      ]
+    },
+    {
+      "number": 46,
+      "title": "Generative models: autoencoders, GANs, and diffusion",
+      "level": "Advanced",
+      "concepts": [
+        "Generative AI",
+        "Autoencoder",
+        "VAE",
+        "GAN",
+        "Diffusion",
+        "Denoising",
+        "Latent space"
+      ],
+      "notebook": "46_Generative_Models_Autoencoders_and_Diffusion.ipynb",
+      "script": "examples/46_Generative_Models_Autoencoders_and_Diffusion.py",
+      "examples": 2,
+      "expected_stdout": [
+        "clean shape: (12,) noisy differs: True\noracle reconstruction error: 0.0\n",
+        "held-out denoising MSE: 0.0617 noisy baseline: 0.255\na learned denoiser, not a complete diffusion sampler\n"
+      ]
+    },
+    {
+      "number": 47,
+      "title": "Multimodal models and contrastive representations",
+      "level": "Advanced",
+      "concepts": [
+        "Multimodal AI",
+        "Vision-language models",
+        "Audio",
+        "Video",
+        "Contrastive learning",
+        "Shared embeddings"
+      ],
+      "notebook": "47_Multimodal_Models_and_Contrastive_Learning.ipynb",
+      "script": "examples/47_Multimodal_Models_and_Contrastive_Learning.py",
+      "examples": 1,
+      "expected_stdout": [
+        "synthetic matched pair IDs: [0, 1, 2, 3]\ncontrastive loss: 0.0005\n"
+      ]
+    },
+    {
+      "number": 48,
+      "title": "Pydantic, FastAPI, and a tested inference endpoint",
+      "level": "Intermediate to advanced",
+      "concepts": [
+        "Pydantic",
+        "FastAPI",
+        "REST APIs",
+        "Inference endpoint",
+        "Request validation",
+        "Testing"
+      ],
+      "notebook": "48_Pydantic_FastAPI_and_Model_Serving.ipynb",
+      "script": "examples/48_Pydantic_FastAPI_and_Model_Serving.py",
+      "examples": 1,
+      "expected_stdout": [
+        "valid: {'label': 1, 'model_version': 'teaching-rule-v1'} invalid status: 422\n"
+      ]
+    },
+    {
+      "number": 49,
+      "title": "MLOps, drift, reproducibility, and model artifacts",
+      "level": "Advanced",
+      "concepts": [
+        "MLOps",
+        "Data drift",
+        "Concept drift",
+        "Model versioning",
+        "Model artifacts",
+        "Monitoring",
+        "Reproducibility"
+      ],
+      "notebook": "49_MLOps_Drift_and_Model_Artifacts.ipynb",
+      "script": "examples/49_MLOps_Drift_and_Model_Artifacts.py",
+      "examples": 1,
+      "expected_stdout": [
+        "artifact SHA-256: ef15c4b7a67694ca6b260c00eed74fcbfdadc696ce783c023b15c1619adf29a8\nsynthetic drift flag: True shift: 4.079\n"
+      ]
+    },
+    {
+      "number": 50,
+      "title": "Fairness, privacy, and responsible AI evaluation",
+      "level": "Intermediate to advanced",
+      "concepts": [
+        "Bias",
+        "Fairness",
+        "Privacy",
+        "Responsible AI",
+        "Model cards",
+        "Data provenance",
+        "Safety"
+      ],
+      "notebook": "50_Fairness_Privacy_and_Responsible_AI.ipynb",
+      "script": "examples/50_Fairness_Privacy_and_Responsible_AI.py",
+      "examples": 1,
+      "expected_stdout": [
+        "overall accuracy: 0.875\nsubgroup evidence: {np.str_('a'): {'samples': 4, 'actual_positives': 2, 'recall': 1.0}, np.str_('b'): {'samples': 4, 'actual_positives': 2, 'recall': 0.5}}\n"
+      ]
+    },
+    {
+      "number": 51,
+      "title": "Time-series forecasting without future leakage",
+      "level": "Intermediate to advanced",
+      "concepts": [
+        "Time series",
+        "Forecasting",
+        "Temporal splits",
+        "Lag features",
+        "TimeSeriesSplit",
+        "Baselines"
+      ],
+      "notebook": "51_Time_Series_and_Forecasting.ipynb",
+      "script": "examples/51_Time_Series_and_Forecasting.py",
+      "examples": 1,
+      "expected_stdout": [
+        "one-step test MAE: 0.154\npersistence MAE: 0.166\n"
+      ]
+    },
+    {
+      "number": 52,
+      "title": "Agents, workflows, and bounded tool use",
+      "level": "Advanced",
+      "concepts": [
+        "Agents",
+        "Workflows",
+        "Tool calling",
+        "Planning",
+        "Budgets",
+        "Approval",
+        "Prompt injection"
+      ],
+      "notebook": "52_Agents_Workflows_and_Bounded_Tools.ipynb",
+      "script": "examples/52_Agents_Workflows_and_Bounded_Tools.py",
+      "examples": 1,
+      "expected_stdout": [
+        "edge-01 is up tool calls: 1\n"
+      ]
+    },
+    {
+      "number": 53,
+      "title": "Capstone: a leakage-safe telemetry classifier",
+      "level": "Advanced",
+      "concepts": [
+        "Capstone",
+        "Supervised learning",
+        "Baseline",
+        "Pipeline",
+        "Held-out test",
+        "Network engineering"
+      ],
+      "notebook": "53_Capstone_Network_Telemetry_Classifier.ipynb",
+      "script": "examples/53_Capstone_Network_Telemetry_Classifier.py",
+      "examples": 1,
+      "expected_stdout": [
+        "test F1: 0.941 baseline F1: 0.0\n              precision    recall  f1-score   support\n\n           0       0.99      0.93      0.96        76\n           1       0.91      0.98      0.94        49\n\n    accuracy                           0.95       125\n   macro avg       0.95      0.96      0.95       125\nweighted avg       0.95      0.95      0.95       125\n\n"
+      ]
+    },
+    {
+      "number": 54,
+      "title": "Capstone: an evidence assistant with regression tests",
+      "level": "Advanced",
+      "concepts": [
+        "Capstone",
+        "RAG",
+        "Structured output",
+        "Abstention",
+        "Regression tests",
+        "Evidence"
+      ],
+      "notebook": "54_Capstone_Evidence_Assistant_and_Evals.ipynb",
+      "script": "examples/54_Capstone_Evidence_Assistant_and_Evals.py",
+      "examples": 1,
+      "expected_stdout": [
+        "passed evidence cases: 3\n{'text': 'Lab interface MTU is 1500 bytes.', 'source_ids': ['mtu']}\n"
+      ]
+    },
+    {
+      "number": 55,
+      "title": "Recent advances and how to evaluate new AI claims",
+      "level": "Advanced",
+      "concepts": [
+        "Latest advancements",
+        "Recent advances",
+        "Reasoning models",
+        "Test-time compute",
+        "Multimodal models",
+        "Agent evaluation",
+        "Mixture of experts",
+        "Efficient inference",
+        "Research literacy"
+      ],
+      "notebook": "55_Recent_Advances_and_Reading_Research.ipynb",
+      "script": "examples/55_Recent_Advances_and_Reading_Research.py",
+      "examples": 1,
+      "expected_stdout": [
+        "verified answer: 21 candidates checked: 3\ntoy selected expert: 1 output: [2.0, 4.0]\n"
+      ]
+    }
+  ],
+  "worked_examples": 70
+}

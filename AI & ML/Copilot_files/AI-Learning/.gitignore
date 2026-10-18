@@ -1,0 +1,24 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local model artifacts and generated outputs
+*.pt
+*.pth
+*.onnx
+outputs/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
