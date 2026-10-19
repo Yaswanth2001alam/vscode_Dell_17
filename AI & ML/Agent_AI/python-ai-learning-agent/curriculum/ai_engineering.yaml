@@ -1,0 +1,19 @@
+level: ai_engineering
+capstone: Build and evaluate an optional-model assistant with explicit tool permissions.
+topics:
+  - {id: ai-fundamentals, title: AI and deterministic automation, prerequisites: [testing]}
+  - {id: ml-basics, title: Machine learning fundamentals}
+  - {id: supervised, title: Supervised learning}
+  - {id: unsupervised, title: Unsupervised learning}
+  - {id: evaluation, title: Training validation and evaluation}
+  - {id: neural-networks, title: Neural networks}
+  - {id: llms, title: Large language models and model APIs}
+  - {id: prompting, title: Prompt engineering}
+  - {id: structured-outputs, title: Validated structured outputs}
+  - {id: embeddings, title: Embeddings}
+  - {id: rag, title: Retrieval-augmented generation}
+  - {id: tool-calling, title: Tool calling and authorization}
+  - {id: planning, title: Agent planning versus scripted routing}
+  - {id: agent-memory, title: Agent memory}
+  - {id: multi-agent, title: Multi-agent systems}
+  - {id: ai-safety, title: AI safety and evaluation}

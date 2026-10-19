@@ -1,0 +1,30 @@
+level: network_automation
+capstone: Simulate inventory discovery and produce a read-only network validation report.
+topics:
+  - {id: ipaddress, title: IPv4 IPv6 and the ipaddress module, prerequisites: [functions]}
+  - {id: sockets, title: Socket programming}
+  - {id: tcp-udp, title: TCP and UDP}
+  - {id: dns, title: DNS automation}
+  - {id: network-rest, title: Read-only network REST APIs}
+  - {id: json-yaml, title: JSON and YAML inventories}
+  - {id: ssh, title: SSH authentication and read-only commands}
+  - {id: netmiko, title: Netmiko}
+  - {id: paramiko, title: Paramiko}
+  - {id: napalm, title: NAPALM getters}
+  - {id: pyats, title: PyATS testing and parsing}
+  - {id: ansible, title: Ansible integration}
+  - {id: cisco, title: Cisco IOS and IOS XR}
+  - {id: junos, title: Juniper Junos}
+  - {id: eos, title: Arista EOS}
+  - {id: bgp, title: BGP state validation}
+  - {id: ospf, title: OSPF adjacency simulation}
+  - {id: interfaces, title: Interface status monitoring}
+  - {id: lldp, title: LLDP neighbor discovery}
+  - {id: lacp, title: LACP verification}
+  - {id: config-validation, title: Configuration validation and dry-run comparison}
+  - {id: routing-tables, title: Routing table analysis}
+  - {id: inventory, title: Network inventory management}
+  - {id: logs, title: Log analysis}
+  - {id: scapy, title: Offline packet analysis with Scapy}
+  - {id: azure-networking, title: Azure networking read-only automation}
+  - {id: network-reporting, title: Network testing and reporting}

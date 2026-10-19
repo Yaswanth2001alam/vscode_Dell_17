@@ -1,0 +1,14 @@
+level: intermediate
+capstone: Build a tested inventory package with logging and a clean public API.
+topics:
+  - {id: oop, title: Classes and object-oriented programming, prerequisites: [files]}
+  - {id: comprehensions, title: Comprehensions}
+  - {id: iterators, title: Iteration protocols}
+  - {id: generators, title: Lazy generators}
+  - {id: decorators, title: Functions wrapping functions}
+  - {id: context-managers, title: Resource lifetimes and context managers}
+  - {id: regex, title: Regular expressions}
+  - {id: typing, title: Type hints and static analysis}
+  - {id: logging, title: Structured logging}
+  - {id: testing, title: Unit tests and fixtures}
+  - {id: package-management, title: Environments and dependency management}

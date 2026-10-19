@@ -1,0 +1,29 @@
+                                                                               
+ Usage: python -m python_learning_agent [OPTIONS] COMMAND [ARGS]...            
+                                                                               
+ Offline Python teacher: Phase 1 foundation.                                   
+                                                                               
++- Options -------------------------------------------------------------------+
+| --install-completion          Install completion for the current shell.     |
+| --show-completion             Show completion for the current shell, to     |
+|                               copy it or customize the installation.        |
+| --help                        Show this message and exit.                   |
++-----------------------------------------------------------------------------+
++- Commands ------------------------------------------------------------------+
+| learn       Show a complete local lesson and mark it started (not           |
+|             completed).                                                     |
+| explain     Read a local explanation without changing learning progress.    |
+| explore     Explore available offline content; planned lessons report their |
+|             status.                                                         |
+| practice    Display practice or explained solutions; never execute learner  |
+|             code.                                                           |
+| quiz        Take the demonstration quiz and persist an explained score.     |
+| progress    Show persisted learning status, or explicitly update a lesson.  |
+| next-topic  Recommend prerequisite-ready content without repeating          |
+|             completed lessons.                                              |
+| revise      Read a revision lesson, or list lessons flagged by difficulty   |
+|             or low quiz scores.                                             |
+| roadmap     Show all six tracks, prerequisites, lesson availability, and    |
+|             planned capstones.                                              |
++-----------------------------------------------------------------------------+
+
