@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-ai-learning-agent"
+version = "0.1.0"
+description = "Offline-first Python learning companion: Phase 1 foundation"
+requires-python = ">=3.11"
+dependencies = ["typer>=0.12,<1", "rich>=13,<15", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10", "ruff>=0.9,<1", "mypy>=1.14,<2",
+    "types-PyYAML>=6", "nbformat>=5.10,<6", "nbclient>=0.10,<1",
+    "ipykernel>=6,<8", "notebook>=7,<8", "matplotlib>=3.9,<4",
+]
+
+[project.scripts]
+python-learning-agent = "python_learning_agent.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]
+
+[[tool.mypy.overrides]]
+module = ["numpy", "numpy.*"]
+follow_imports = "skip"
+follow_imports_for_stubs = true

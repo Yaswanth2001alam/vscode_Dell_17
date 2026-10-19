@@ -1,0 +1,12 @@
+level: professional
+capstone: Package a validated local API application with reproducible checks.
+topics:
+  - {id: rest-apis, title: HTTP and REST clients, prerequisites: [package-management]}
+  - {id: databases, title: SQL transactions and SQLite}
+  - {id: packaging, title: Python project packaging}
+  - {id: git, title: Git collaboration}
+  - {id: cicd, title: Continuous integration and delivery}
+  - {id: docker, title: Container fundamentals}
+  - {id: secure-coding, title: Input boundaries and secure coding}
+  - {id: observability, title: Logs metrics and traces}
+  - {id: production, title: Production readiness and operations}

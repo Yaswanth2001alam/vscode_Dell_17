@@ -1,0 +1,19 @@
+level: beginner
+capstone: Build a local device inventory and a tested text report.
+topics:
+  - id: variables
+    title: Python Variables, Data Types, and Memory Fundamentals
+    prerequisites: []
+    lesson: lessons/beginner/01_variables
+  - {id: operators, title: Arithmetic and comparison operators}
+  - {id: strings, title: Strings and formatting}
+  - {id: lists, title: Lists and indexing}
+  - {id: tuples, title: Tuples and unpacking}
+  - {id: sets, title: Sets and uniqueness}
+  - {id: dictionaries, title: Dictionaries and structured records}
+  - {id: conditions, title: Boolean logic and conditional branches}
+  - {id: loops, title: For and while loops}
+  - {id: functions, title: Functions and return values}
+  - {id: modules, title: Imports and modules}
+  - {id: exceptions, title: Exceptions and recovery}
+  - {id: files, title: Files and pathlib}

@@ -1,0 +1,12 @@
+level: advanced
+capstone: Build a bounded concurrent offline log-analysis pipeline.
+topics:
+  - {id: concurrency, title: Threading and concurrency, prerequisites: [package-management]}
+  - {id: multiprocessing, title: Process-based parallelism}
+  - {id: asyncio, title: Asynchronous programming}
+  - {id: performance, title: Profiling before optimization}
+  - {id: memory, title: Memory lifetimes and measurement}
+  - {id: patterns, title: Design patterns and tradeoffs}
+  - {id: architecture, title: Modular software architecture}
+  - {id: dependency-injection, title: Explicit dependencies}
+  - {id: advanced-testing, title: Property-based and integration testing}

@@ -1,0 +1,38 @@
+[
+  {
+    "prompt": "1. What does x = 3; y = x; x = 4; print(y) display?",
+    "options": {"a": "3", "b": "4", "c": "NameError"},
+    "answer": "a",
+    "explanation": "Rebinding x does not rebind y. Integers are immutable."
+  },
+  {
+    "prompt": "2. Which expression turns the text '24' into an integer?",
+    "options": {"a": "str('24')", "b": "int('24')", "c": "'24' + '1'"},
+    "answer": "b",
+    "explanation": "int parses integer text. str keeps text; string addition concatenates."
+  },
+  {
+    "prompt": "3. a = ['r1']; b = a; b.append('r2'). What is a?",
+    "options": {"a": "['r1']", "b": "['r2']", "c": "['r1', 'r2']"},
+    "answer": "c",
+    "explanation": "a and b share one list, so mutation through either name is visible."
+  },
+  {
+    "prompt": "4. Why does '24' + 1 fail?",
+    "options": {"a": "24 is too large", "b": "String and integer addition are incompatible", "c": "print is required"},
+    "answer": "b",
+    "explanation": "Convert valid numeric text first: int('24') + 1 produces 25."
+  },
+  {
+    "prompt": "5. Complete the missing operator to compare list VALUES: left __ right.",
+    "options": {"a": "is", "b": "=", "c": "=="},
+    "answer": "c",
+    "explanation": "== compares values; is checks identity; = is assignment."
+  },
+  {
+    "prompt": "6. You need to append a device without changing the input list. What is appropriate?",
+    "options": {"a": "Assign another name to the same list", "b": "Copy the outer list, then append", "c": "Use is instead of =="},
+    "answer": "b",
+    "explanation": "A shallow list copy is sufficient when adding an outer element; nested mutable elements remain shared."
+  }
+]
